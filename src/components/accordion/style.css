@@ -9,9 +9,7 @@
 }
 .wrapper button {
   padding: 10px 20px;
-  background-color: antiquewhite;
-  background: ;
-  color: #302f2f;
+  background-color: rgb(172, 199, 234);
   font-weight: bold;
   font-size: 20px;
   cursor: pointer;
@@ -20,13 +18,15 @@
   width: 500px;
 }
 .accordion-item {
-  background-color: antiquewhite;
+  background-color: rgb(172, 199, 234);
+
   margin-bottom: 10px;
-  padding: 10px 20px;
+  padding: 20px 30px;
 }
-.head {
+.title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   cursor: pointer;
 }

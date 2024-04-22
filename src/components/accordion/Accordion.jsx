@@ -5,10 +5,10 @@ import data from "./data";
 import "./style.css";
 export default function Accordion() {
   const [selected, setSelected] = useState([]);
-  const [multiSelected, setMultiSelected] = useState(false);
+  const [multiSelection, setMultiSelection] = useState(false);
 
   function handleSingleSelection(id) {
-    if (multiSelected) {
+    if (multiSelection) {
       setSelected((prevSelection) => {
         if (prevSelection.includes(id)) {
           return prevSelection.filter((i) => i !== id);
@@ -23,16 +23,18 @@ export default function Accordion() {
   }
   function handleMultiSelection() {
     console.log(selected[0]);
-    if (multiSelected) setSelected([selected[selected.length - 1]]);
+    if (multiSelection) setSelected([selected[selected.length - 1]]);
 
-    setMultiSelected((prevSelection) => !prevSelection);
+    setMultiSelection((prevSelection) => !prevSelection);
     // console.log(multiSelected);
 
     // setSelected(id === selected ? null : id);
   }
   return (
     <div className="wrapper">
-      <button onClick={handleMultiSelection}>Toggle multi selection</button>
+      <button onClick={handleMultiSelection}>
+        {multiSelection ? "Disable" : "Enable"} MultiSelection
+      </button>
       <div className="accordion">
         {data && data.length > 0 ? (
           data.map((item) => {
@@ -42,9 +44,9 @@ export default function Accordion() {
                 className="accordion-item"
                 onClick={() => handleSingleSelection(item.id)}
               >
-                <div className="head">
+                <div className="title">
                   <h3>{item.question}</h3>
-                  <span>+</span>
+                  <span>{selected.includes(item.id) ? "🔼" : "🔽"}</span>
                 </div>
                 {selected.map((i, index) => {
                   return i === item.id ? (
