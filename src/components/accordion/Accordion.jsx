@@ -18,17 +18,11 @@ export default function Accordion() {
       });
     } else {
       setSelected(selected[0] === id ? [null] : [id]);
-      console.log(selected[0]);
     }
   }
   function handleMultiSelection() {
-    console.log(selected[0]);
     if (multiSelection) setSelected([selected[selected.length - 1]]);
-
     setMultiSelection((prevSelection) => !prevSelection);
-    // console.log(multiSelected);
-
-    // setSelected(id === selected ? null : id);
   }
   return (
     <div className="wrapper">
