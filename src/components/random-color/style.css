@@ -1,0 +1,18 @@
+.color-wrapper {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.color-wrapper button {
+  margin: 5px;
+}
+.color-wrapper div {
+  text-align: center;
+}
+
+.sub-wrapper {
+  width: 500px;
+}
