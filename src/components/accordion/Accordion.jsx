@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "./data";
-import "./style.css";
+import "./accordion-styles.css";
 export default function Accordion() {
   const [selected, setSelected] = useState([]);
   const [multiSelection, setMultiSelection] = useState(false);

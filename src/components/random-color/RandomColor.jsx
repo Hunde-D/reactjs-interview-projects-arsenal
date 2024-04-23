@@ -1,7 +1,7 @@
 //TODO: Convert RGB to HEX and vice-versa
 
 import { useEffect, useState } from "react";
-import "./style.css";
+import "./randomColor-styles.css";
 
 export default function RandomColor() {
   const [colorType, setColorType] = useState("hex");
