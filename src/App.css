@@ -8,3 +8,9 @@
   gap: 20px;
   padding-top: 20px;
 }
+@media (max-width: 650px) {
+  .App {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
