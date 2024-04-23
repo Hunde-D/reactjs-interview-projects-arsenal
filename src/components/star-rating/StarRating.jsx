@@ -18,19 +18,22 @@ export default function StarRating({ noOfStars = 5 }) {
   }
   return (
     <div className="star-wrapper">
-      {[...Array(noOfStars)].map((_, index) => {
-        index += 1;
-        return (
-          <FaStar
-            key={index}
-            className={index <= (hover || rating) ? "active" : "inactive"}
-            onClick={() => handleClick(index)}
-            onMouseMove={() => handleOnMove(index)}
-            onMouseLeave={() => handleOnLeave(index)}
-            size={40} // the star icon size
-          />
-        );
-      })}
+      <h3>P3. Star⭐ Rating</h3>
+      <div className="star">
+        {[...Array(noOfStars)].map((_, index) => {
+          index += 1;
+          return (
+            <FaStar
+              key={index}
+              className={index <= (hover || rating) ? "active" : "inactive"}
+              onClick={() => handleClick(index)}
+              onMouseMove={() => handleOnMove(index)}
+              onMouseLeave={() => handleOnLeave(index)}
+              size={40} // the star icon size
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

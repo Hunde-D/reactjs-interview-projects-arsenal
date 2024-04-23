@@ -24,6 +24,7 @@ export default function Accordion() {
   }
   return (
     <div className="wrapper">
+      <h3>P1. 🔽Accordion🔼</h3>
       <button onClick={handleMultiSelection}>
         {multiSelection ? "Disable" : "Enable"} MultiSelection
       </button>
