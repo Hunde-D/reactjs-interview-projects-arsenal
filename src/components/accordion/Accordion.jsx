@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "./data";
-import "./style.css";
+import "./accordion-styles.css";
 export default function Accordion() {
   const [selected, setSelected] = useState([]);
   const [multiSelection, setMultiSelection] = useState(false);
@@ -24,6 +24,7 @@ export default function Accordion() {
   }
   return (
     <div className="wrapper">
+      <h3>P1. 🔽Accordion🔼</h3>
       <button onClick={handleMultiSelection}>
         {multiSelection ? "Disable" : "Enable"} MultiSelection
       </button>

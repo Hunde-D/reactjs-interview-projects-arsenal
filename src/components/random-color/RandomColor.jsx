@@ -1,7 +1,7 @@
 //TODO: Convert RGB to HEX and vice-versa
 
 import { useEffect, useState } from "react";
-import "./style.css";
+import "./randomColor-styles.css";
 
 export default function RandomColor() {
   const [colorType, setColorType] = useState("hex");
@@ -35,7 +35,7 @@ export default function RandomColor() {
 
   return (
     <div className="color-wrapper">
-      P2. Random Color🎨 Generator
+      <h3>P2. Random Color🎨 Generator</h3>
       <div className="sub-wrapper" style={{ backgroundColor: `${color}` }}>
         <button className="color-btn" onClick={() => handleColorChange("hex")}>
           HEX

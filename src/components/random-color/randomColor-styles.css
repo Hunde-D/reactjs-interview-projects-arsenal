@@ -1,10 +1,9 @@
 .color-wrapper {
-  align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  gap: 20px;
 }
 .color-wrapper button {
   margin: 5px;
