@@ -4,7 +4,7 @@ import "./groceryBud-styles.css";
 export default function GroceryBud() {
   const [groceryItems, setGroceryItems] = useState([]);
   const [grocery, setGrocery] = useState("");
-
+  const [checked, setChecked] = useState([]);
   function handleChange(e) {
     setGrocery(e.target.value);
   }
@@ -18,6 +18,9 @@ export default function GroceryBud() {
   function deleteItem(index) {
     const newGroceryItems = groceryItems.filter((item, i) => i !== index);
     setGroceryItems(newGroceryItems);
+  }
+  function handleChecked(e) {
+    setChecked();
   }
 
   return (
@@ -42,7 +45,7 @@ export default function GroceryBud() {
                     id={index}
                     name={item}
                     value={item}
-                    onChange={handleChange}
+                    onChange={handleChecked}
                   />
                   <label htmlFor={index}>{item}</label>
                   <button onClick={() => deleteItem(index)}>Delete</button>

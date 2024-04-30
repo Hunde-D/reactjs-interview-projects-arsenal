@@ -5,6 +5,7 @@ import ImageSlider from "./components/image-slider/ImageSlider";
 import RandomColor from "./components/random-color/RandomColor";
 import StarRating from "./components/star-rating/StarRating";
 import GroceryBud from "./components/grocery-bud/GroceryBud";
+import DataLoader from "./components/load-more/DataLoader";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <RandomColor />
       <GroceryBud />
       <StarRating noOfStars={10} />
+      <DataLoader url={"https://dummyjson.com/products"} limit={"6"} />
     </div>
   );
 }
